@@ -1,0 +1,59 @@
+.servis {
+    background-color: $second-background;
+    text-align: center;
+    padding-bottom: 200px;
+    padding-top: 200px;
+
+    background-image: linear-gradient(to top,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)),
+        url(../images/bcg.jpg);
+
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.servis__text {
+    font-family: $primary-font-family;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    display: flex;
+    flex-flow: column;
+}
+
+.servis__button {
+    font-family: $primary-font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.88;
+    display: inline-block;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    color: #ffffff;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: solid transparent;
+
+    margin-top: 30px;
+    padding: 10px 32px;
+    min-width: 200px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,&:focus{
+            background: #188ce8;
+            color: #ffffff;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+    }
+}
+

@@ -1,0 +1,111 @@
+.main-img {
+    display: flex;
+
+    &__item {
+        margin-right: 30px;
+        width: 370px;
+        z-index: -1;
+    }
+    &:nth-child(3n) {
+        margin-right: 0px;
+    }
+}
+
+/*team*/
+
+.team-groop {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-photo {
+    display: flex;
+}
+
+.team-photo__item {
+    margin-right: 30px;
+
+    background: #ffffff;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    &:nth-child(4n) {
+        margin-right: 0px;
+    }
+}
+
+
+.team-groop__titl {
+    font-family: $primary-font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $color-title;
+}
+
+.team-groop__text {
+    font-family: $primary-font-family;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $secondary-color;
+
+    margin-top: 10px;
+}
+
+.social-list {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-list__item {
+    justify-content: space-around;
+    margin-left: 10px;
+
+    &:first-child {
+        margin-left: 0px;
+    }
+}
+
+.social-list__link {
+    display: flex;
+
+    justify-content: space-around;
+    width: 44px;
+    height: 44px;
+    background-color: $background-color;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,:focus {
+        background-color: $focus-color;
+    }
+}
+
+.social-list__icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 11px;
+    justify-content: space-around;
+    align-items: center;
+    fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.social-list__link:hover .social-list__icon,
+.social-list__link:focus .social-list__icon {
+    fill: $background-color;
+}
