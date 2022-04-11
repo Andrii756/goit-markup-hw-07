@@ -19,7 +19,6 @@ body {
         color: #2196f3;
     }
     &--black{
-
         color:$color-text;
     }
     &--white{
@@ -104,15 +103,15 @@ body {
     }
 }
 
-.contact__item:hover .contact__icon,
-.contact__item:focus .contact__icon {
-    fill: $focus-color;
-}
-
 .contact__icon {
     display: block;
     width: 16px;
     height: 16px;
     margin-right: 10px;
     fill: $secondary-color;
+
+    .contact__item:hover &,
+    .contact__item:focus & {
+        fill: $focus-color;
+    }
 }

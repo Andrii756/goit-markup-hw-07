@@ -14,6 +14,10 @@
     
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+    &:focus::before,
+    &:hover::before {
+        transform: translateY(0);
+    }
 }
 
 .overlay__content {
@@ -39,14 +43,9 @@
     transform: translateY(+300px);
 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.overlay:focus .overlay__content,
-.overlay:hover .overlay__content {
-    transform: translateY(0);
-}
-
-.overlay:focus::before,
-.overlay:hover::before {
-    transform: translateY(0);
+    .overlay:focus &,
+    .overlay:hover & {
+        transform: translateY(0);
+    }
 }

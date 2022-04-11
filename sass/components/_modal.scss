@@ -14,11 +14,13 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.modal {
+    transform: scale(0.1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-.backdrop__is-hidden.modal {
-  transform: scale(0.1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .modal {
   z-index: 2;
   position: absolute;

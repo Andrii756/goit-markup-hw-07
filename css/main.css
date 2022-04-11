@@ -161,17 +161,17 @@ body {
   color: #2196f3;
 }
 
-.contact__item:hover .contact__icon,
-.contact__item:focus .contact__icon {
-  fill: #2196f3;
-}
-
 .contact__icon {
   display: block;
   width: 16px;
   height: 16px;
   margin-right: 10px;
   fill: #757575;
+}
+
+.contact__item:hover .contact__icon,
+.contact__item:focus .contact__icon {
+  fill: #2196f3;
 }
 
 .servis {
@@ -222,8 +222,8 @@ body {
   margin-top: 30px;
   padding: 10px 32px;
   min-width: 200px;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .servis__button:hover, .servis__button:focus {
@@ -321,14 +321,14 @@ body {
 }
 
 .form__text {
-  font-family: var(--primary-font-family);
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1/15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--color-title);
+  color: #212121;
   margin-bottom: 12px;
 }
 
@@ -347,8 +347,8 @@ body {
 .form__lable {
   text-align: left;
   margin-bottom: 4px;
-  color: var(--secondary-color);
-  font-family: var(--primary-font-family);
+  color: #757575;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -370,8 +370,7 @@ body {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input:focus,
-.form__textarea {
+.form__input:focus {
   outline: white;
   border: 1px solid #2196f3;
 }
@@ -400,6 +399,12 @@ body {
   border-radius: 4px;
   resize: none;
   margin-bottom: 20px;
+  outline: white;
+}
+
+.form__textarea:focus {
+  outline: white;
+  border: 1px solid #2196f3;
 }
 
 .form__icon {
@@ -424,8 +429,8 @@ body {
 }
 
 .checkbox__lable {
-  color: var(--secondary-color);
-  font-family: var(--primary-font-family);
+  color: #757575;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -560,15 +565,14 @@ body {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.button-nav:focus,
+/* .button-nav:focus,
 .button-nav:hover {
-  background-color: var(--focus-color);
-  color: #ffffff;
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-
+    background-color:$focus-color;
+    color: #ffffff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+} */
 .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,6 +722,11 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.overlay:focus::before, .overlay:hover::before {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .overlay__content {
   position: absolute;
   top: 0;
@@ -743,12 +752,6 @@ body {
 
 .overlay:focus .overlay__content,
 .overlay:hover .overlay__content {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.overlay:focus::before,
-.overlay:hover::before {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -895,7 +898,7 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-photo__item:nth-child(4n) {
+.team-photo:nth-child(4n) {
   margin-right: 0px;
 }
 
@@ -958,7 +961,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list__link:hover, .social-list__link :focus {
+.social-list__link:hover, .social-list__link:focus {
   background-color: #2196f3;
 }
 
@@ -1172,8 +1175,8 @@ footer {
   padding: 10px 29px;
   margin-left: 12px;
   min-width: 200px;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foter__button:hover, .foter__button:focus {

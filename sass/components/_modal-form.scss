@@ -5,7 +5,7 @@
 }
 
 .form__text {
-    font-family: var(--primary-font-family);
+    font-family: $primary-font-family;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -13,7 +13,7 @@
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: var(--color-title);
+    color: $color-title;
     margin-bottom: 12px;
 }
 
@@ -28,8 +28,8 @@
 .form__lable {
     text-align: left;
     margin-bottom: 4px;
-    color: var(--secondary-color);
-    font-family: var(--primary-font-family);
+    color: $secondary-color;
+    font-family: $primary-font-family;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -47,16 +47,14 @@
     box-sizing: border-box;
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form__input:focus,
-.form__textarea {
-    outline: white;
-    border: 1px solid #2196f3;
-}
-
-.form__input::placeholder {
-    color: rgba(117, 117, 117, 0.5);
+    &:focus {
+        outline: white;
+        border: 1px solid #2196f3;
+    }
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
 }
 
 .form__textarea {
@@ -66,6 +64,13 @@
     border-radius: 4px;
     resize: none;
     margin-bottom: 20px;
+    outline: white;
+
+    &:focus {
+        outline: white;
+        border: 1px solid #2196f3;
+    
+    }
 }
 
 .form__icon {
@@ -75,10 +80,10 @@
     top: 50%;
     left: 12px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form__input:focus+.form__icon {
-    fill: #2196f3;
+    .form__input:focus + & {
+        fill: #2196f3;
+    }
 }
 
 .checkbox {
@@ -89,8 +94,8 @@
 }
 
 .checkbox__lable {
-    color: var(--secondary-color);
-    font-family: var(--primary-font-family);
+    color: $secondary-color;
+    font-family: $primary-font-family;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -104,13 +109,13 @@
     height: 11px;
     fill: #ffffff;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.checkbox__icon--marker {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(5%, -10%);
+    &--marker {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(5%, -10%);
+    }
 }
 
 .checkbox__item {
@@ -118,13 +123,13 @@
     border-radius: 4px;
     margin-right: 9px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.checkbox:checked+.checkbox__item {
-    background-color: #2196f3;
-    border-radius: 4px;
-    border: 1px solid #2196f3;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .checkbox:checked + & {
+        background-color: #2196f3;
+        border-radius: 4px;
+        border: 1px solid #2196f3;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .political {
